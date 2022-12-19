@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
+
+// Se crea el componente llamado FORMTODO, que tendrá ccomo funcionalidad el cual contiene ciertas propiedades para ser utilizadas posteriormente.
 const FORMTODO = (props) => {
   const { handleAddItem } = props; // Declara constante y se le asigna las props(parametros que se pueden heredar).
-  const [description, setDescription] = useState(""); // El estado que tendra la descripcion y poder cambiar el estado del componente
+  const [description, setDescription] = useState(""); // Se uso el Hook useState el cual maneja la siguiente sintaxis: la variable const y entre corchetes cuadrados se declara una variable a la cual a aEl estado que tendra la descripcion y poder cambiar el estado del componente
   const handleSubmit = (e) => {
     // Manejador de evento onSubmit en el formulario
     e.preventDefault(); // Nos ayuda a evitar que se refresque la pagina y se pierda la informacion
@@ -29,7 +31,7 @@ const FORMTODO = (props) => {
           />
           <button
             className="button pink"
-            disabled={description ? "" : "disabled"} // La dondicion ternario valida si es True devuelve vacio o False devuelve inhabilidato
+            disabled={description ? "" : "disabled"} // Se utiliza un operador ternario que valida si es True devuelve vacio o False devuelve inhabilidato
           >
             Add
           </button>

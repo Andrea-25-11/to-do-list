@@ -1,26 +1,23 @@
-/* Este componente va contener los componentes requeridos los cuales son: FormTodo y TaskList, estos
- traen la funcionalidad propuesta para lograr lo esperado que es añadir tareas, visaulizarlas y checkearlas 
- cuando estén hechas y se tiene la posibilidad de eliminarlas */
+/* Este componente llamado CONTAINER tendrá en si interior los tros dos componentes llamados TaskList y FormTodo para lograr hacer funcional la página */
 
- import React, { useState } from "react"; // Se importa el hook useState de control estados de react
+ import React, { useState } from "react"; // Se importa el hook useState de control estados de react para que pueda ser interpretado 
 
- // Importamos los componentes, ya que, el componente Container es el padre de todos los componentes
+ // Se importaton los componentes TaskListo y FormTodo al ser los hijos del Container
  import TaskList from "./TaskList";
  import FormTodo from "./FormTodo";
  
- // Se declara una constante e inicializa con una función flecha, la cual, tiene como objetico
+ // Se declara una constante e inicializa con una función flecha, la cual, tiene como objetivo retornar los otros dos componentes y a su vez usar el useState para actualizar la lista cada que se añada un item a la misma 
  const CONTAINER = (_) => {
    const [list, setList] = useState([]); // Estado nuevo(lista), se alamacenan los datos del componente FormTodo a la lista vacia.
  
-   // Recibe las propiedades del componente FormTodo para ir organizarlas cada vez que se agrega una nueva.
+   // Recibe las propiedades del componente FormTodo para ir organizarlas cada vez que se agrega una nueva y se utiliza el operador spread (...)permite que un iterable se expanda en lugares donde se esperan más de 0 argumentos.
    const handleAddItem = (addItem) => {
-     setList([...list, addItem]);
+     setList([...list, addItem]); 
    };
    return (
      <div>
        <FormTodo handleAddItem={handleAddItem} />
        <TaskList list={list} setList={setList} />{" "}
-       {/* Genera un valor cada vez que se ingresa */}
      </div>
    );
  };
