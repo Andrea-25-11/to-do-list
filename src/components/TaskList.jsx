@@ -6,16 +6,11 @@ import CheckBox from "./CheckBox";
 const TASKLIST = (props) => {
   const { list, setList } = props; // Se le asigna a la variable list las props que lleguen
 
-  /* Cuando el usuario intente escribir sobre el input de usuario o contraseña, se va a ejecutar el evento onChange en React. 
-  Dentro de este evento, existe una propiedad target que guarda el elemento input. Esto quiere decir que, a través del comando 
-  event.target, podemos tener acceso a toda la API del elemento HTML. Así, podemos acceder a todos los atributos del elemento input, 
-  como lo son su type y value. */
+  /* Cuando el usuario intente escribir sobre el input de usuario o contraseña, se va a ejecutar el evento onChange en React. Dentro de este evento, existe una propiedad target que guarda el elemento input. Esto quiere decir que, a través del comando event.target, podemos tener acceso a toda la API del elemento HTML. Así, podemos acceder a todos los atributos del elemento input, como lo son su type y value. */
   const onChangeStatus = (e) => {
     const { name, checked } = e.target;
 
-    /* Esta constante actualiza el listado de las traeas que se van agregando para la correcta visualizacion, en ella se usa un 
-    metodo de los arrays para recorrer algo y que esta devuelva algo, para iterar a través de los elementos dentro de una colección 
-    de arreglos en JavaScript. En este caso la lista y la nueva tarea agregada para la actualizacion correcta */
+    /* Esta constante actualiza el listado de las traeas que se van agregando para la correcta visualizacion, en ella se usa un metodo de los arrays para recorrer algo y que esta devuelva algo, para iterar a través de los elementos dentro de una colección de arreglos en JavaScript. En este caso la lista y la nueva tarea agregada para la actualizacion correcta */
     const updateList = list.map((item) => ({
       ...item,
       done: item.id === name ? checked : item.done,

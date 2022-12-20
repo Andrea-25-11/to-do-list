@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"; // Se importa el componente de react que nos ayuda a pintar sin necesidad de crear un contenedor padre
+import React, { Fragment } from "react"; // Se importa el componente de react fragment
 
 // Constantes checkbox que como parametros se le pasa unas props
 const CHECKBOX = (props) => {
