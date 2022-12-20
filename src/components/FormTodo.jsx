@@ -33,7 +33,7 @@ const FORMTODO = (props) => {
             className="button pink"
             disabled={description ? "" : "disabled"} // Se utiliza un operador ternario que valida si es True devuelve vacio o False devuelve inhabilidato
           >
-            Add
+            Añadir tarea
           </button>
         </div>
       </div>

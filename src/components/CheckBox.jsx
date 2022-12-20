@@ -4,16 +4,14 @@ import React, { Fragment } from "react"; // Se importa el componente de react qu
 const CHECKBOX = (props) => {
     const {
         onChange,
-        data: { id, description, done },// aqui verifico las propiedades que necesito traerme como el id, la descripcion y si esta hecho o no la tarea
+        data: { id, description, done },// Adentro del objeto data se crea otro objeto llamado id, descripcion y done
     } = props;
-    // Retorna una estructura HTML
+    // Se crea el bloque de código que creara el html del componente
     return (
-      /* El componente fragment en React es un componente desarrollado por esta librería JavaScript para agrupar elementos sin introducir elementos extra 
-        a nivel de DOM. En este sentido, es un componente hueco que no te romperá estilos ni semántica. Tambien se puede interpretar <> </>*/
-      <Fragment>
+      <>
         <svg
           viewBox="0 0 0 0"
-          style={{ position: "absolute", zIndex: -1, opacity: 0 }} // Estilos en linea, siempre hay que colocarlos en {} para iterpretar codigo js en react y en otras {} para manejar esos estilo como en js que se manaejan como objetos
+          style={{ position: "absolute", zIndex: -1, opacity: 0 }} // Aplicamos un estilo en linea, siempre hay que colocarlos entre doble corchete {} para iterpretar codigo js en react y para manejar los estilos como en js es decir como objetos
         >
           <defs>
             <path id="todo__line" d="M21 12.3h168v0.1z" />
@@ -47,7 +45,7 @@ const CHECKBOX = (props) => {
           </svg>
           <div className="todo__text">{description}</div>
         </label>
-      </Fragment>
+      </>
     );
 };
 

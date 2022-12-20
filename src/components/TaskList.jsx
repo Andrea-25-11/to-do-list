@@ -1,8 +1,8 @@
-// Principalmente se importa lo necesario que se vaya a utilizar en este componente principal.
+// Se importe el compoentne del checkbox para poder seleccionar las tareas en la lista
 import React from "react";
-import CheckBox from "./CheckBox"; // Componente para poder seleccionar las tareas en la lista en la cual se iran agregando
+import CheckBox from "./CheckBox"; 
 
-// Constantes tasklist que como parametros se le pasa unas props necesarias para la funcionalidad y dinamismo de la app.
+// Al componente TASKLIST se le asignan unas props correspondientes a 
 const TASKLIST = (props) => {
   const { list, setList } = props; // Se le asigna a la variable list las props que lleguen
 
@@ -38,7 +38,7 @@ const TASKLIST = (props) => {
       {list.length ? (
         <p>
           <button className="button blue" onClick={onClickRemoveItem}>
-            Delete All Done
+            Eliminar tareas completadas
           </button>
         </p>
       ) : null}

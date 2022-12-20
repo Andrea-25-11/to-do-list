@@ -1,17 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
 html {
-  background: rgb(152, 50, 161);
+  background: linear-gradient(#d122b4, #2b0b25 ) ;
   height: 100%;
   display: flex;
+  font-family: 'Unbounded', cursive;
 }
 
 body {
   width: 100%;
   margin: auto;
 }
-
+ .h1{
+  color:white;
+ }
 .App {
-  font-family: sans-serif;
+  font-family: 'Unbounded', cursive;
   text-align: center;
+  background-image: url("https://es.dreamstime.com/doodle-de-l%C3%A1piz-patr%C3%B3n-transparente-en-vector-ilustraci%C3%B3n-coloreada-mano-con-papel-fondo-inagotable-l%C3%A1pices-colores-concepto-image183615200");
 }
 
 .todo-list {
@@ -53,6 +58,7 @@ $colorBlueHover: #133947;
   border: 0px solid;
   border-radius: 5px;
   color: white;
+  font-family: 'Unbounded', cursive;
 }
 
 .button[disabled] {
@@ -67,16 +73,19 @@ $colorBlueHover: #133947;
 /** TODO*/
 .file-input {
   padding: 2px;
-  background: #f8f8f8;
+  background: transparent;
 }
 
 .file-input>.text {
+  font-family: 'Unbounded', cursive;
   outline: none;
   padding: 0px 10px;
   font-size: 15px;
   width: 230px;
   height: 46px;
-  background: transparent;
+  background: #e090eb;
+  border-radius: 10px;
+  margin-bottom: 12px;
   border: 0px solid;
 }
 

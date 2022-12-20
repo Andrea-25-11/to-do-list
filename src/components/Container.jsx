@@ -16,6 +16,7 @@
    };
    return (
      <div>
+        <h1 className="h1">MIS PENDIENTES</h1>
        <FormTodo handleAddItem={handleAddItem} />
        <TaskList list={list} setList={setList} />{" "}
      </div>
